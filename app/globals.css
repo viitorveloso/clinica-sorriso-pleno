@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1a2e4a;
+  --turquoise: #4db8c4;
+  --font-sans: "Inter", "Montserrat", "Segoe UI", Arial, sans-serif;
+  --font-display: "Montserrat", "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-navy antialiased;
+  font-family: var(--font-sans);
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-block rounded-full border border-white/20 bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-turquoise-600 shadow-[0_8px_30px_rgba(255,255,255,0.08)] backdrop-blur-xl;
+  }
+
+  .container-base {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-turquoise px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(77,184,196,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-turquoise-600 focus:outline-none focus:ring-2 focus:ring-turquoise/40 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-xl transition duration-300 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40;
+  }
+
+  .glass-card {
+    @apply rounded-[28px] border border-white/40 bg-white/70 shadow-[0_20px_50px_rgba(26,46,74,0.08)] backdrop-blur-2xl;
+  }
+}
